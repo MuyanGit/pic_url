@@ -8,7 +8,7 @@ file="log.txt"
 filename=${NowDateTime}${file}
 exec 3>&1 4>&2
 trap 'exec 2>&4 1>&3' 0 1 2 3
-exec 1>>backup_log\${filename}: 2>&1
+exec 1>>${filename}: 2>&1
 # Everything below will go to the file filename
 
 # 执行的命令主体
