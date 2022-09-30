@@ -4,7 +4,7 @@
 ##cd G:\Demo_Git\pic_url
 
 NowDateTime=$(date +%Y-%m-%d)
-file="backup_log\log.txt"
+file="backup_log/log.txt"
 filename=${NowDateTime}${file}
 exec 3>&1 4>&2
 trap 'exec 2>&4 1>&3' 0 1 2 3
