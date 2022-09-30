@@ -12,5 +12,11 @@ exec 1>>${filename}: 2>&1
 # Everything below will go to the file filename
 
 # 执行的命令主体
-echo 开始运行备份命令—————————————— && echo `date`······备份进行中 && git add . && git commit -m "From Auto Updata" && git push -u origin master -f 
- && git pull –rebase origin master && echo 图床备份 && echo 结束运行备份命令—————————————— && echo `date`······备份结束中
+echo 开始运行备份命令
+echo `date`······备份进行中 
+git add .
+git commit -m "From Auto Updata"
+git push -u origin master -f 
+git pull –rebase origin master
+echo 图床备份结束运行备份命令——————————————
+echo `date`······备份结束中
