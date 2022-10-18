@@ -13,6 +13,6 @@ rem 推送到服务端
 rem git push
 
 git push origin master --force && echo 执行成功 || echo 执行失败
-ping -n 1 localhost
+ping -n 3 localhost
 
 
