@@ -1,18 +1,17 @@
 @echo off
-rem è®¾ç½®é»˜è®¤å€¼
+rem ÉèÖÃÄ¬ÈÏÖµ
 set content="%date% %time%: Updated By MuyanGit"
-set /p content= è¾“å…¥æœ¬æ¬¡æäº¤çš„å†…å®¹ï¼Œä¸å»ºè®®çœç•¥ï¼š
+set /p content= ÊäÈë±¾´ÎÌá½»µÄÄÚÈİ£¬²»½¨ÒéÊ¡ÂÔ£º
 
 git add .
 
-rem æäº¤æ›´æ–°
+rem Ìá½»¸üĞÂ
 
 git commit -m %content%
 
-rem æ¨é€åˆ°æœåŠ¡ç«¯
+rem ÍÆËÍµ½·şÎñ¶Ë
 rem git push
 
-git push origin master --force && echo æ‰§è¡ŒæˆåŠŸ || echo æ‰§è¡Œå¤±è´¥
+git push origin master --force && echo Ö´ĞĞ³É¹¦ || echo Ö´ĞĞÊ§°Ü
 
 
-pause
