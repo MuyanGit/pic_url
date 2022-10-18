@@ -1,7 +1,7 @@
 @echo off
 rem 设置默认值
 set content="%date% %time%: Updated By MuyanGit"
-set /p content= 输入本次提交的内容，不建议省略：
+rem set /p content= 输入本次提交的内容，不建议省略：
 
 git add .
 
