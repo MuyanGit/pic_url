@@ -58,7 +58,7 @@ def push(change):
     #os.system('git push -u origin master')    
     # os.system('start "G:\Demo_Git\pic_url\一键上传图床.bat"')
     
-    os.system('start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe -c "G:\Demo_Git\pic_url\一键上传图床.sh"')
+    os.system('start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe -c bash"G:\Demo_Git\pic_url\一键上传图床.sh" ')
     print('·'*76)
     # 备份博客
     os.system('start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe -c "G:\MuyanGitBlog\MuyanGit\杂项\博客备份\bash bolg_backup.sh"')
