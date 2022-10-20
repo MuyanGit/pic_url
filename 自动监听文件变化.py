@@ -2,7 +2,7 @@
 Author: muyangit muyangit@outlook.com
 Date: 2022-10-20 20:22:26
 LastEditors: muyangit muyangit@outlook.com
-LastEditTime: 2022-10-20 22:01:36
+LastEditTime: 2022-10-20 22:05:31
 FilePath: \AutoJSg:\Demo_Git\pic_url\自动监听文件变化.py
 Description: 
 
@@ -53,10 +53,10 @@ def push(change):
         change (_type_): _description_
     """
     print('-'*76)
-    os.system('git add .')
-    os.system('git commit -m\"auto'+change+'\"')
+    # os.system('git add .')
+    # os.system('git commit -m\"auto'+change+'\"')
     #os.system('git push -u origin master')    
-    os.system('git push origin master --force && echo 执行成功 || echo 执行失败')
+    os.system('start G:\Demo_Git\pic_url\一键上传图床.bat')
     print('·'*76)
     # 备份博客
     os.system('start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe -c "G:\MuyanGitBlog\MuyanGit\杂项\博客备份\bash bolg_backup.sh"')
@@ -117,7 +117,7 @@ if __name__ == "__main__":
     try:
         while True:
             # 设置监听频率(间隔周期时间)
-            time.sleep(300)
+            time.sleep(1)
     except KeyboardInterrupt:
         observer.stop()
     observer.join()
