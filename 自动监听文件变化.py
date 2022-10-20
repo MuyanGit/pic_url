@@ -2,7 +2,7 @@
 Author: muyangit muyangit@outlook.com
 Date: 2022-10-20 20:22:26
 LastEditors: muyangit muyangit@outlook.com
-LastEditTime: 2022-10-20 22:47:33
+LastEditTime: 2022-10-20 23:37:06
 FilePath: \AutoJSg:\Demo_Git\pic_url\自动监听文件变化.py
 Description: 
 
@@ -122,7 +122,7 @@ if __name__ == "__main__":
     try:
         while True:
             # 设置监听频率(间隔周期时间)
-            time.sleep(1)
+            time.sleep(300)
     except KeyboardInterrupt:
         observer.stop()
     observer.join()
