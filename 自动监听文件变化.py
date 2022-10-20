@@ -2,7 +2,7 @@
 Author: muyangit muyangit@outlook.com
 Date: 2022-10-20 20:22:26
 LastEditors: muyangit muyangit@outlook.com
-LastEditTime: 2022-10-20 22:05:31
+LastEditTime: 2022-10-20 22:22:01
 FilePath: \AutoJSg:\Demo_Git\pic_url\自动监听文件变化.py
 Description: 
 
@@ -56,7 +56,9 @@ def push(change):
     # os.system('git add .')
     # os.system('git commit -m\"auto'+change+'\"')
     #os.system('git push -u origin master')    
-    os.system('start G:\Demo_Git\pic_url\一键上传图床.bat')
+    # os.system('start "G:\Demo_Git\pic_url\一键上传图床.bat"')
+    
+    os.system('start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe -c "G:\Demo_Git\pic_url\一键上传图床.sh"')
     print('·'*76)
     # 备份博客
     os.system('start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe -c "G:\MuyanGitBlog\MuyanGit\杂项\博客备份\bash bolg_backup.sh"')
@@ -107,18 +109,19 @@ class FileEventHandler(FileSystemEventHandler):
 if __name__ == "__main__":
     deletefile(r'G:\MuyanGitBlog\MuyanGit\杂项\博客备份',7,'.txt\uf03a')
     deletefile(r'G:\MuyanGitBlog\PonyTown2020\杂项\博客备份',7,'.txt\uf03a')
-    # 实例化Observer对象
-    observer = Observer()
-    event_handler = FileEventHandler()
-    # 设置监听目录
-    dis_dir = r"G:\Demo_Git\pic_url\img"
-    observer.schedule(event_handler, dis_dir, True)
-    observer.start()
-    try:
-        while True:
-            # 设置监听频率(间隔周期时间)
-            time.sleep(1)
-    except KeyboardInterrupt:
-        observer.stop()
-    observer.join()
+    os.system('start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe -c "G:\Demo_Git\pic_url\一键上传图床.sh"')
+    # # 实例化Observer对象
+    # observer = Observer()
+    # event_handler = FileEventHandler()
+    # # 设置监听目录
+    # dis_dir = r"G:\Demo_Git\pic_url\img"
+    # observer.schedule(event_handler, dis_dir, True)
+    # observer.start()
+    # try:
+    #     while True:
+    #         # 设置监听频率(间隔周期时间)
+    #         time.sleep(1)
+    # except KeyboardInterrupt:
+    #     observer.stop()
+    # observer.join()
     
