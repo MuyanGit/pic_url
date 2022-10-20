@@ -1,11 +1,10 @@
 #!/bin/bash
 #author Oliver
 #since 2020-09-03 15:24:31
- 
 #git remote rm origin
 #replace your git location
 #git remote add origin 'https://github.com/**********'
-#cd G:/Demo_Git/pic_url
+cd G:/Demo_Git/pic_url
 echo "----------本地库状态----------"
 git status
 echo "----------本地库状态----------"
@@ -22,8 +21,8 @@ then
   echo -e "\033[42;34m push to github success! \033[0m"
   ping localhost -n 3
 else
-   echo -e "\033[41;30m push to github fail! \033[0m"
-   ping localhost -n 3
-   exit 1
+  echo -e "\033[41;30m push to github fail! \033[0m"
+  ping localhost -n 3
+  exit 1
 fi
  
