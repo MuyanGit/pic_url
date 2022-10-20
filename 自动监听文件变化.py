@@ -2,7 +2,7 @@
 Author: muyangit muyangit@outlook.com
 Date: 2022-10-20 20:22:26
 LastEditors: muyangit muyangit@outlook.com
-LastEditTime: 2022-10-20 21:42:49
+LastEditTime: 2022-10-20 21:55:03
 FilePath: \AutoJSg:\Demo_Git\pic_url\自动监听文件变化.py
 Description: 
 
@@ -58,7 +58,7 @@ def push(change):
     #os.system('git push -u origin master')    
     os.system('git push origin master --force && echo 执行成功 || echo 执行失败')
     print('·'*76)
-    os.system('start G:\MuyanGitBlog\MuyanGit\杂项\博客备份\bk.lnk')
+    os.system('start G:\MuyanGitBlog\MuyanGit\杂项\博客备份\博客备份.bat')
     print('+'*76)
 
 
@@ -108,7 +108,7 @@ if __name__ == "__main__":
     observer = Observer()
     event_handler = FileEventHandler()
     # 设置监听目录
-    dis_dir = "./img/"
+    dis_dir = r"G:\Demo_Git\pic_url\img"
     observer.schedule(event_handler, dis_dir, True)
     observer.start()
     try:
