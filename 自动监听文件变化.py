@@ -2,7 +2,7 @@
 Author: muyangit muyangit@outlook.com
 Date: 2022-10-20 20:22:26
 LastEditors: muyangit muyangit@outlook.com
-LastEditTime: 2022-10-20 22:39:21
+LastEditTime: 2022-10-20 22:47:33
 FilePath: \AutoJSg:\Demo_Git\pic_url\自动监听文件变化.py
 Description: 
 
@@ -44,7 +44,15 @@ def deletefile(path,N = 2,ext = '.log'):
                 elif os.path.isdir(filename):#如果是目录则递归调用当前函数
                         deletefile(filename)
 
+def os_system(pro_path,sh_file):
+    """git-bash.exe--cmd调用
 
+    Args:
+        pro_path (_type_): 项目路径
+        sh_file (_type_): 路径的脚本sh_file
+    """
+    cmd_=f'start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe --cd={pro_path} -c "bash {sh_file}"'
+    os.system(cmd_)
 
 def push(change):
     """_summary_
@@ -53,18 +61,11 @@ def push(change):
         change (_type_): _description_
     """
     print('-'*76)
-    # os.system('git add .')
-    # os.system('git commit -m\"auto'+change+'\"')
-    #os.system('git push -u origin master')    
-    # os.system('start "G:\Demo_Git\pic_url\一键上传图床.bat"')
-    
-    os.system('start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe -c  "G:\Demo_Git\pic_url\一键上传图床.sh" ')
-    start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe --cd=G:\Demo_Git\pic_url -c "bash 一键上传图床.sh"
-
+    os_system('G:\Demo_Git\pic_url','一键上传图床.sh')
     print('·'*76)
     # 备份博客
-    os.system('start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe -c  "G:\MuyanGitBlog\MuyanGit\杂项\博客备份\bash bolg_backup.sh"')
-    os.system('start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe -c  "G:\MuyanGitBlog\PonyTown2020\杂项\博客备份\bash bolg_backup.sh"')
+    os_system('G:\MuyanGitBlog\MuyanGit\杂项\博客备份','bolg_backup.sh')
+    os_system('G:\MuyanGitBlog\PonyTown2020\杂项\博客备份','bolg_backup.sh')
     # os.system()
     print('+'*76)
 
@@ -111,19 +112,18 @@ class FileEventHandler(FileSystemEventHandler):
 if __name__ == "__main__":
     deletefile(r'G:\MuyanGitBlog\MuyanGit\杂项\博客备份',7,'.txt\uf03a')
     deletefile(r'G:\MuyanGitBlog\PonyTown2020\杂项\博客备份',7,'.txt\uf03a')
-    os.system('start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe -c "G:\Demo_Git\pic_url\一键上传图床.sh"')
-    # # 实例化Observer对象
-    # observer = Observer()
-    # event_handler = FileEventHandler()
-    # # 设置监听目录
-    # dis_dir = r"G:\Demo_Git\pic_url\img"
-    # observer.schedule(event_handler, dis_dir, True)
-    # observer.start()
-    # try:
-    #     while True:
-    #         # 设置监听频率(间隔周期时间)
-    #         time.sleep(1)
-    # except KeyboardInterrupt:
-    #     observer.stop()
-    # observer.join()
+    # 实例化Observer对象
+    observer = Observer()
+    event_handler = FileEventHandler()
+    # 设置监听目录
+    dis_dir = r"G:\Demo_Git\pic_url\img"
+    observer.schedule(event_handler, dis_dir, True)
+    observer.start()
+    try:
+        while True:
+            # 设置监听频率(间隔周期时间)
+            time.sleep(1)
+    except KeyboardInterrupt:
+        observer.stop()
+    observer.join()
     
