@@ -2,7 +2,7 @@
 Author: muyangit muyangit@outlook.com
 Date: 2022-10-20 20:22:26
 LastEditors: muyangit muyangit@outlook.com
-LastEditTime: 2022-10-20 22:22:01
+LastEditTime: 2022-10-20 22:39:21
 FilePath: \AutoJSg:\Demo_Git\pic_url\自动监听文件变化.py
 Description: 
 
@@ -58,11 +58,13 @@ def push(change):
     #os.system('git push -u origin master')    
     # os.system('start "G:\Demo_Git\pic_url\一键上传图床.bat"')
     
-    os.system('start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe -c bash"G:\Demo_Git\pic_url\一键上传图床.sh" ')
+    os.system('start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe -c  "G:\Demo_Git\pic_url\一键上传图床.sh" ')
+    start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe --cd=G:\Demo_Git\pic_url -c "bash 一键上传图床.sh"
+
     print('·'*76)
     # 备份博客
-    os.system('start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe -c "G:\MuyanGitBlog\MuyanGit\杂项\博客备份\bash bolg_backup.sh"')
-    os.system('start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe -c "G:\MuyanGitBlog\PonyTown2020\杂项\博客备份\bash bolg_backup.sh"')
+    os.system('start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe -c  "G:\MuyanGitBlog\MuyanGit\杂项\博客备份\bash bolg_backup.sh"')
+    os.system('start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe -c  "G:\MuyanGitBlog\PonyTown2020\杂项\博客备份\bash bolg_backup.sh"')
     # os.system()
     print('+'*76)
 
