@@ -2,7 +2,7 @@
 Author: muyangit muyangit@outlook.com
 Date: 2022-10-20 20:22:26
 LastEditors: muyangit muyangit@outlook.com
-LastEditTime: 2022-10-20 21:55:03
+LastEditTime: 2022-10-20 22:01:36
 FilePath: \AutoJSg:\Demo_Git\pic_url\自动监听文件变化.py
 Description: 
 
@@ -58,7 +58,10 @@ def push(change):
     #os.system('git push -u origin master')    
     os.system('git push origin master --force && echo 执行成功 || echo 执行失败')
     print('·'*76)
-    os.system('start G:\MuyanGitBlog\MuyanGit\杂项\博客备份\博客备份.bat')
+    # 备份博客
+    os.system('start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe -c "G:\MuyanGitBlog\MuyanGit\杂项\博客备份\bash bolg_backup.sh"')
+    os.system('start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe -c "G:\MuyanGitBlog\PonyTown2020\杂项\博客备份\bash bolg_backup.sh"')
+    # os.system()
     print('+'*76)
 
 
