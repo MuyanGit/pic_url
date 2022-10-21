@@ -1,9 +1,4 @@
 @echo off
-
-%1 mshta vbscript:CreateObject("Shell.Application").ShellExecute("cmd.exe","/c %~s0 ::","","runas",1)(window.close)&&exit
-
-cd /d "%~dp0"  
-
 rem 设置默认值
 set content="%date% %time%: Updated By MuyanGit"
 rem set /p content= 输入本次提交的内容，不建议省略：
