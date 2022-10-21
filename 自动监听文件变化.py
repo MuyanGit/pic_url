@@ -2,8 +2,8 @@
 Author: muyangit muyangit@outlook.com
 Date: 2022-10-20 20:22:26
 LastEditors: muyangit muyangit@outlook.com
-LastEditTime: 2022-10-20 23:37:06
-FilePath: \AutoJSg:\Demo_Git\pic_url\自动监听文件变化.py
+LastEditTime: 2022-10-21 19:01:31
+FilePath: \undefinedg:\Demo_Git\pic_url\自动监听文件变化.py
 Description: 
 
 Copyright (c) 2022 by muyangit muyangit@outlook.com, All Rights Reserved. 
@@ -52,7 +52,20 @@ def os_system(pro_path,sh_file):
         sh_file (_type_): 路径的脚本sh_file
     """
     cmd_=f'start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe --cd={pro_path} -c "bash {sh_file}"'
+    print(f"执行{pro_path}\{sh_file}")
     os.system(cmd_)
+
+def push_pic(change):
+    """备份图床
+
+    Args:
+        change (_type_): _description_
+    """
+    # 备份图床
+    print('·'*38)
+    os_system('G:\Demo_Git\pic_url','一键上传图床.sh')
+    print('·'*38)
+
 
 def push(change):
     """_summary_
@@ -60,11 +73,13 @@ def push(change):
     Args:
         change (_type_): _description_
     """
+    # 备份图床
     print('-'*76)
     os_system('G:\Demo_Git\pic_url','一键上传图床.sh')
-    print('·'*76)
+    print('·'*38)
     # 备份博客
     os_system('G:\MuyanGitBlog\MuyanGit\杂项\博客备份','bolg_backup.sh')
+    print('·'*38)
     os_system('G:\MuyanGitBlog\PonyTown2020\杂项\博客备份','bolg_backup.sh')
     # os.system()
     print('+'*76)
