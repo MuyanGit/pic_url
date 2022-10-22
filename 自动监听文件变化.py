@@ -1,12 +1,13 @@
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
 '''
-Author: muyangit muyangit@outlook.com
-Date: 2022-10-20 20:22:26
-LastEditors: muyangit muyangit@outlook.com
-LastEditTime: 2022-10-21 19:01:31
-FilePath: \undefinedg:\Demo_Git\pic_url\自动监听文件变化.py
-Description: 
-
-Copyright (c) 2022 by muyangit muyangit@outlook.com, All Rights Reserved. 
+@File    :   自动监听文件变化.py
+@Time    :   2022/10/22 01:18:55
+@Author  :   muyangit 
+@Version :   1.0
+@Contact :   muyangit@outlook.com
+@License :   (C)Copyright 2021-2025, muyangit&laysen
+@Desc    :   None
 '''
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
@@ -67,7 +68,7 @@ def push_pic(change):
     print('·'*38)
 
 
-def push(change):
+def push_bolg_backup(change):
     """_summary_
 
     Args:

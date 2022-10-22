@@ -1,4 +1,4 @@
 @echo off
-echo 5分钟运行一次
-python  G:\Demo_Git\pic_url\自动监听文件变化.py
+echo G:\Demo_Git\pic_url\python任务计划管理.py
+python  G:\Demo_Git\pic_url\python任务计划管理.py
 pause
